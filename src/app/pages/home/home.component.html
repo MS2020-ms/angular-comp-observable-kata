@@ -1,0 +1,10 @@
+<!-- <button class="btn btn-primary" (click)="changeUser()">Change User</button> -->
+<div class="container">
+    <select name="select" class="mt-3" id="select" (change)="onChange($event)">
+        <option disabled selected>Choose a User</option>
+        <option value="1">Nora M. Buchanan</option>
+        <option value="2">Andrew M. Duncan</option>
+        <option value="3">Gloria Swanson</option>
+    </select>
+</div>
+<app-ride-info></app-ride-info>

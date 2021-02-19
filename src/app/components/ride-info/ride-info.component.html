@@ -1,1 +1,110 @@
-<p>ride-info works!</p>
+<body>
+    <div class="container">
+        <!-- <p>{{user}}</p> -->
+        <div class="header">
+            <div class="d-flex justify-content-between mb-4">
+                <p class="gray bold">PASSENGER INFO</p>
+                <div class="d-flex flex-row align-items-center hide-info bold">
+                    <p class="mr-2">Hide information</p>
+                    <!-- <i class="fas fa-toggle-off gray" (click)="hideText()"></i> -->
+                    <!-- Prueba toogle class -->
+                    <!-- <i class="fas fa-toggle-on gray" id="btn-toogle" (click)="toogleIcon()"></i> -->
+                    <!-- Prueba toogle class body - dark mode-->
+                    <!-- <button (click)="darkMode()">Dark Mode</button> -->
+                    <label class="label">
+                        <div class="toggle">
+                            <input class="toggle-state" type="checkbox" name="check" value="check"
+                                (click)="hideText()" />
+                            <div class="toggle-inner">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="active-bg"></div>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+            <div class="body-top">
+                <div class="row">
+                    <div class="passanger-info col-4">
+                        <div class="client d-flex align-items-center">
+                            <img src="{{users.image}}" alt="client image">
+                            <div class="name ml-3">
+                                <p class="hide bold mb-2" id="hide">{{users.name}}</p>
+                                <p class="gray">4 interactions</p>
+                            </div>
+                        </div>
+                        <div class="email">
+                            <p class="gray mb-2">EMAIL</p>
+                            <p class="hide" id="hide">{{users.email}}</p>
+                        </div>
+                        <div class="phone">
+                            <p class="gray mb-2">PHONE</p>
+                            <p class="hide" id="hide">{{users.phone}}</p>
+                        </div>
+                        <div class="location">
+                            <p class="gray mb-2">LOCATION</p>
+                            <p class="hide" id="hide">{{users.location}}</p>
+                        </div>
+                    </div>
+                    <div class="pay-options col">
+                        <div class="row">
+                            <div class="frame">
+                                <img src="../../../assets/images/paypal.png" alt="paypal pay option">
+                            </div>
+                            <div class="frame">
+                                <img src="../../../assets/images/visa.png" alt="visa pay option">
+                            </div>
+                            <div class="frame">
+                                <img src="../../../assets/images/mastercard.png" alt="mastercard pay option">
+                            </div>
+                            <div class="frame">
+                                <img src="../../../assets/images/applepay.png" alt="apple pay option">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="body-down">
+                <div class=" schema">
+                    <div class="row route">
+                        <i class="fas fa-check-circle"></i>
+                        <hr>
+                        <div class="slidein"></div>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="row directions">
+                        <div class="origin">
+                            <p>{{users.ride.district}}</p>
+                            <p class="gray mb-2">{{users.ride.origin}}</p>
+                        </div>
+                        <div class="destination">
+                            <p>Greenpoint</p>
+                            <p class="gray mb-2">{{users.ride.destination}}</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row d-flex justify-content-between mt-4">
+                    <div class="distance">
+                        <p>{{users.ride.distance}} km</p>
+                        <p class="gray mb-2">Distance</p>
+                    </div>
+                    <div class="time">
+                        <p>{{users.ride.time}} min</p>
+                        <p class="gray mb-2">Time</p>
+                    </div>
+                    <div class="price">
+                        <p>{{users.ride.price | currency}}</p>
+                        <p class="gray mb-2">Price</p>
+                    </div>
+                    <div class="energy">
+                        <p>{{users.ride.energy}} kWh</p>
+                        <p class="gray mb-2">Energy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
